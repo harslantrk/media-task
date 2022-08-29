@@ -42,7 +42,7 @@ class MediaController extends Controller implements MediaInterface
         $new->source = $data['form-source'];
         $new->save();
 
-        return redirect()->back();
+        return redirect('/media');
     }
 
     /**
@@ -80,7 +80,7 @@ class MediaController extends Controller implements MediaInterface
         $new->source = $data['form-source'];
         $new->save();
 
-        return redirect()->back();
+        return redirect('/media');
     }
 
     /**
@@ -91,8 +91,9 @@ class MediaController extends Controller implements MediaInterface
      */
     public function destroy($id)
     {
-        Media::where('id', $id)->delete();
+        $user = Auth::user();
+        Media::where(['id' => $id, 'user_id' => $user->id])->delete();
 
-        return redirect()->back();
+        return redirect('/media');
     }
 }

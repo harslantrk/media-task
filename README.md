@@ -8,6 +8,11 @@ php artisan migrate:fresh --seed
 npm run dev
 ```
 
+For the test task;
+```sh
+php artisan test
+```
+
 ## Features
 
 - Add, edit and delete media items and categories

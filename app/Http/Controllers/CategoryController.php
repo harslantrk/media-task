@@ -38,7 +38,7 @@ class CategoryController extends Controller implements CategoryInterface
         $new->rank = $data['form-rank'];
         $new->save();
 
-        return redirect()->back();
+        return redirect('/category');
     }
 
     /**
@@ -72,7 +72,7 @@ class CategoryController extends Controller implements CategoryInterface
         $new->rank = $data['form-rank'];
         $new->save();
 
-        return redirect()->back();
+        return redirect('/category');
     }
 
     /**
@@ -83,8 +83,9 @@ class CategoryController extends Controller implements CategoryInterface
      */
     public function destroy($id)
     {
-        Category::where('id', $id)->delete();
+        $user = Auth::user();
+        Category::where(['id' => $id, 'user_id' => $user->id])->delete();
 
-        return redirect()->back();
+        return redirect('/category');
     }
 }
