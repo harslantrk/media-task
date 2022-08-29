@@ -18,3 +18,4 @@ php artisan test
 - Add, edit and delete media items and categories
 - Login and register pages
 - There are fake datas in seed files
+- Test files for testing app
