@@ -1,6 +1,6 @@
 # Media Task
 
-In this application you can add media items and media categories. 
+In this application you can add media items and categories. 
 
 After download, run these commands;
 ```sh
@@ -8,7 +8,7 @@ php artisan migrate:fresh --seed
 npm run dev
 ```
 
-For the test, , run this command (when the run these tests, database will be refresh.);
+To run the test, run this command (when run these tests, database will be refreshed.)
 ```sh
 php artisan test
 ```
