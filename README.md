@@ -8,7 +8,7 @@ php artisan migrate:fresh --seed
 npm run dev
 ```
 
-For the test task;
+For the test, , run this command (when the run these tests, database will be refresh.);
 ```sh
 php artisan test
 ```
